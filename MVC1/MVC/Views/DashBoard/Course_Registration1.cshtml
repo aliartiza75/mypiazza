@@ -1,0 +1,88 @@
+﻿@model IEnumerable<MVC.Models.ClassViewModel>
+@{
+    ViewBag.Title = "Course_Registration1";
+    Layout = "~/Views/Shared/_Dashboard_layout.cshtml";
+}
+
+<h2>Course_Registration1</h2>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Test.js"></script>
+    <script src="~/Scripts/ie-emulation-modes-warning.js"></script>
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+</head>
+
+<h2>Course_Registration</h2>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Course_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructor_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class_Description)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <th>
+                @Html.DisplayFor(model => item.Course_ID)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Course_Name)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Instructor_Name)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Class_Description)
+            </th>
+
+            <td>
+                @{
+                    ViewData["ID"] = item.Course_ID;
+                    @Html.ActionLink("Answer", "Index", "QuestionViewModels", new { @id = item.Course_ID }, null)
+                }
+
+
+            </td>
+        </tr>
+                    }
+</table>
+<div class="container">
+
+    <div class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+
+
+        <input id="email" placeholder="Email address" class="form-control" required autofocus type="email" />
+        <input id="pass" class="form-control" placeholder="Password" type="password" required />
+
+
+        <input type="checkbox" value="1" class="chk" name="choice"> Student
+        <input type="checkbox" value="2" class="chk" name="choice"> Teacher
+
+        <input id="Button1" class="btn btn-lg btn-primary btn-block" Text="Sign in" type="button" value="Sign In" />
+
+    </div>
+
+</div>
+

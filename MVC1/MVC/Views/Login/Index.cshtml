@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Test.js"></script>
+    <script src="~/Scripts/ie-emulation-modes-warning.js"></script>
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="form-signin">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+
+
+            <input id="email" placeholder="Email address" class="form-control" required autofocus type="email"  />
+            <input id="pass" class="form-control" placeholder="Password" type="password" required  />
+
+
+            <input type="checkbox" value="1" class="chk" name="choice"> Student
+            <input type="checkbox" value="2" class="chk" name="choice"> Teacher
+            <br/>
+            <br/>
+            <input id="Button1" class="btn btn-lg btn-primary btn-block"  Text="Sign in"  type="button" value="Sign In" />
+    
+        </div>
+
+    </div>
+    <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MVC.Models.ClassViewModel>
+@{
+    ViewBag.Title = "Course_Registration";
+    Layout = "~/Views/Shared/_Dashboard_layout2.cshtml";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Test.js"></script>
+    <script src="~/Scripts/ie-emulation-modes-warning.js"></script>
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+</head>
+
+<h2>Course_Registration</h2>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Course_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructor_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class_Description)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <th>
+                @Html.DisplayFor(model => item.Course_ID)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Course_Name)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Instructor_Name)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Class_Description)
+            </th>
+        </tr>
+    }
+</table>
+<br/><br /><br /><br /><br /><br /><br />
+<div class="container">
+
+    <div class="form-signin">
+        <h4 class="form-signin-heading">Course Registration</h4>
+
+        <input id="Student_Id" placeholder="Student ID" class="form-control" value="@Session["Email"]" required autofocus type="email" />
+        <input id="Course_Id" class="form-control" placeholder="Course Id" type="text" required />
+
+        <input id="Button" class="btn btn-lg btn-primary btn-block" Text="Sign in" type="button" value="Register" />
+
+    </div>
+
+</div>
+

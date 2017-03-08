@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MVC.Models.ClassViewModel>
+@{
+    ViewBag.Title = "Ask_Question";
+    Layout = "~/Views/Shared/_Dashboard_layout2.cshtml";
+}
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Course_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructor_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class_Description)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <th>
+                @Html.DisplayFor(model => item.Course_ID)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Course_Name)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Instructor_Name)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Class_Description)
+            </th>
+          
+            <td>
+                @{
+                    @Html.ActionLink("Answer", "Index", "QuestionViewModels", new { @id = item.Course_ID }, null)
+                }
+
+                
+            </td>
+        </tr>
+    }
+
+</table>
+

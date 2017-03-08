@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign Up</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+    <script src="~/Scripts/ie-emulation-modes-warning.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <script src="~/Scripts/Sign_Up.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="form-signin">
+            <h2 class="form-signin-heading">Please sign up</h2>
+
+            <input id="cnic" placeholder="CNIC" class="form-control"   type="text" />
+            <input id="name"  placeholder="Name" class="form-control" required type="text" />
+            <input id="address" class="form-control" placeholder="Address" required type="text" />
+            <input id="contact" class="form-control" placeholder="Contact" required type="text" />
+            <input id="email" placeholder="Email" class="form-control" type="text" />
+            <input id="password" class="form-control" placeholder="Password" required type="password" />
+            
+            
+            
+            <input type="checkbox" value="1" class="chk" name="choice"> Student
+            <input type="checkbox" value="2" class="chk" name="choice"> Teacher
+
+            <br/>
+            <br />
+            <br />
+            <br />
+
+            <input id="ButtonSS" class="btn btn-lg btn-primary btn-block" Text="Sign in" type="submit" value="Sign Up" />
+        </div>
+
+    </div>
+    <!-- /container -->
+</body>
+</html>
